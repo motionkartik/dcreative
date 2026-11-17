@@ -8,76 +8,75 @@
 :root[data-theme="dark"]{--bg:#15171b;--bar:#22252b;--fg:#e8eaee;--bd:#3a3e47;--ac:#6f95ff}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:Arial,Helvetica,sans-serif}
-#bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bar);border-bottom:1px solid var(--bd);padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bar);border-bottom:1px solid var(--bd);padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px;align-items:flex-end}
 #bar label{font-size:12px;display:flex;flex-direction:column;gap:2px}
-#bar input,#bar select{padding:6px 8px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--fg);font-size:13px}
-#bar button{padding:8px 14px;border:1px solid var(--bd);border-radius:6px;background:var(--bar);color:var(--fg);cursor:pointer;font-size:13px}
-#bar button.p{background:var(--ac);border-color:var(--ac);color:#fff}
+#bar select{padding:6px 8px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--fg);font-size:13px}
+#bar button{padding:8px 14px;border:1px solid var(--ac);border-radius:6px;background:var(--ac);color:#fff;cursor:pointer;font-size:13px}
 .hint{font-size:12px;opacity:.7;padding:8px 14px}
-#slips{display:flex;flex-direction:column;align-items:center;gap:16px;padding:12px 8px 40px;overflow-x:auto}
-.page{width:210mm;height:296mm;background:#fff;color:#000;padding:12mm 10mm;flex:none;overflow:hidden}
-.slip{border:1px solid #000;font-size:11px;line-height:1.35}
-.hd{text-align:center;padding:8px 6px;border-bottom:1px solid #000}
-.co{font-size:16px;font-weight:700}.ad{font-size:10.5px}
-.mo{text-align:center;font-weight:700;padding:5px;border-bottom:1px solid #000;font-size:12px}
-.info{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #000}
-.info div{padding:3px 8px;display:flex;gap:4px}
-.info b{white-space:nowrap}.info span{flex:1;min-width:20px}
-table{width:100%;border-collapse:collapse}
-th,td{border:1px solid #000;padding:3px 6px;text-align:left;height:21px;vertical-align:top}
-.slip table{border-width:0 0 1px 0}.slip td:first-child,.slip th:first-child{border-left:0}.slip td:last-child,.slip th:last-child{border-right:0}
-th{background:#eee;font-size:10.5px}.r{text-align:right}
-.tot td{font-weight:700}
-.net{padding:6px 8px;font-weight:700;display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #000}
-.ft{text-align:center;font-size:10px;padding:6px}
+#slips{display:flex;flex-direction:column;align-items:center;padding:12px 8px 40px;overflow-x:auto}
+.page{position:relative;width:210mm;height:296.5mm;background:#fff;color:#000;padding:17pt 9pt 0 27.5pt;flex:none;overflow:hidden;font-size:8.8pt;-webkit-print-color-adjust:exact;print-color-adjust:exact;box-shadow:0 1px 6px rgba(0,0,0,.25)}
+.co{text-align:center;font-size:10pt;line-height:14pt}
+.ad{text-align:center;font-size:7pt;line-height:9pt;margin-top:14.5pt}
+.mo{text-align:center;font-size:8.5pt;line-height:12pt;margin-top:6.5pt}
+.info{display:grid;grid-template-columns:348pt 1fr;margin-top:6.8pt}
+.info div{display:flex;height:11.8pt;line-height:11.8pt;padding-left:2.5pt}
+.info div:nth-child(even){padding-left:0}
+.info b{font-weight:400;width:68pt;flex:none}.info i{font-style:normal;margin-right:3pt}
+.info span{flex:1;min-width:20pt;white-space:nowrap}
+table{width:100%;border-collapse:collapse;table-layout:fixed;margin-top:6.5pt}
+th,td{padding:0 2pt;font-weight:400;white-space:nowrap;overflow:hidden;line-height:11pt}
+th{border:1px solid #000;text-align:center;height:10.8pt;line-height:10pt}
+.h2 th{background:#d9d9d9}
+.b td{height:12.7pt}
+.b td:nth-child(1){border-left:1px solid #000}.b td:nth-child(3){border-left:1.5px solid #000}.b td:nth-child(6){border-left:1px solid #000;padding-left:1pt}.b td:nth-child(7){border-right:1px solid #000}
+.b td:nth-child(5){padding-right:1pt}
+.b td:nth-child(3){padding-left:1pt}
+.b:last-of-type td{border-bottom:0}
+.tot td{background:#d9d9d9;height:11pt;border:1px solid #000;border-left:0;border-right:0}
+.tot td:nth-child(1){border-left:1px solid #000}.tot td:nth-child(3){border-left:1.5px solid #000}.tot td:nth-child(5),.tot td:nth-child(6){border-left:1px solid #000}.tot td:nth-child(7){border-right:1px solid #000}
+.r{text-align:right}
+.net{display:flex;justify-content:space-between;margin-top:13.5pt;font-size:8.7pt;height:11pt;line-height:11pt;padding:0 2.3pt 0 3pt}
+.np{display:inline-block;min-width:66pt;text-align:right}
+.ft{position:absolute;left:27.5pt;right:18pt;bottom:22pt;text-align:center;font-size:6.6pt;line-height:8pt}
 [contenteditable]{outline:none}
 [contenteditable]:hover{background:#fff7cc}[contenteditable]:focus{background:#fff2a8}
-.pdf [contenteditable]:hover,.pdf [contenteditable]:focus{background:none}
 @media print{
  @page{size:A4;margin:0}
  body{background:#fff}#bar,.hint{display:none}
- #slips{display:block;padding:0}.page{margin:0;break-after:page}
+ #slips{display:block;padding:0}.page{margin:0;box-shadow:none;height:296.5mm}
  [contenteditable]:hover,[contenteditable]:focus{background:none}
 }
 </style></head><body>
 <div id="bar">
  <label>Month<span><select id="mm"></select> <select id="yy"></select></span></label>
- <button class="p" onclick="prn()">Print</button>
+ <button onclick="window.print()">Print</button>
 </div>
 <div class="hint">Click any text on the slip to edit it. Totals, net pay and amount in words update automatically. Use Print and choose Save as PDF.</div>
 <div id="slips"></div>
 <script>
-var N=1,ER=6,DR=6;
-var CO='DCREATIVE STUDIO LLP',AD='906, Lotus Link Square K3 And K4, C T S 195 D N Nagar New Link Road,Andheri, Dist: MUMBAI.';
-function E(t,c){return '<span contenteditable="true"'+(c?' class="'+c+'"':'')+'>'+(t||'')+'</span>'}
+var ER=9;
+function E(t){return '<span contenteditable="true">'+(t||'')+'</span>'}
 function C(t,c){return '<td'+(c?' class="'+c+'"':'')+' contenteditable="true">'+(t||'')+'</td>'}
-function mk(i){
- var s=i==0,er='',dr='';
- for(var k=0;k<Math.max(ER,DR);k++){
-  var e=s&&k==0?['Basic','14,400.00','14,400.00']:s&&k==1?['HRA','3,600.00','3,600.00']:[];
-  var d=s&&k==0?['PF','1,728.00']:s&&k==1?['ESIC','108.00']:s&&k==2?['Prof. Tax','200.00']:[];
-  er+='<tr>'+(k==0?C('Present','')+C(s?'30.00':'','r'):k==1?C('','')+C('','r'):C('','')+C('','r'))+C(e[0])+C(e[1],'r n')+C(e[2],'r n e')+C(d[0])+C(d[1],'r n d')+'</tr>';
- }
- return '<div class="page"><div class="slip">'
- +'<div class="hd"><div class="co g_co">'+E(CO)+'</div><div class="ad g_ad">'+E(AD)+'</div></div>'
+function I(l,v){return '<div><b>'+l+'</b><i>:</i>'+E(v)+'</div>'}
+function mk(){
+ var rows='',e=[['Basic','14,400.00','14,400.00'],['HRA','3,600.00','3,600.00']],d=[['PF','1,728.00'],['ESIC','108.00'],['Prof. Tax','200.00']];
+ for(var k=0;k<ER;k++){var a=e[k]||[],b=d[k]||[];
+  rows+='<tr class="b">'+C(k==0?'Present':'')+C(k==0?'30.00':'','r')+C(a[0])+C(a[1],'r n')+C(a[2],'r n e')+C(b[0])+C(b[1],'r n d')+'</tr>'}
+ return '<div class="page">'
+ +'<div class="co">'+E('DCREATIVE STUDIO LLP')+'</div>'
+ +'<div class="ad">'+E('906, Lotus Link Square K3 And K4, C T S 195 D N Nagar New Link Road,Andheri, Dist: MUMBAI.')+'</div>'
  +'<div class="mo">Salary Slip for the Month of <span class="g_mo" contenteditable="true">Sep-2026</span></div>'
- +'<div class="info">'
- +'<div><b>ID / Name :</b>'+E(s?'010000 / YOUR NAME':'')+'</div><div><b>Designation :</b>'+E(s?'Designation':'')+'</div>'
- +'<div><b>Department :</b>'+E('-')+'</div><div><b>Location :</b>'+E('-')+'</div>'
- +'<div><b>DOJ/Grade :</b>'+E(s?'01-Jan-2022/-':'')+'</div><div><b>PAN :</b>'+E('')+'</div>'
- +'<div><b>Salary Bank :</b>'+E('')+'</div><div><b>Salary A/c No. :</b>'+E('')+'</div>'
- +'<div><b>PF No./UAN :</b>'+E('')+'</div><div></div></div>'
- +'<table><colgroup><col width="14%"><col width="9%"><col width="21%"><col width="12%"><col width="13%"><col width="19%"><col width="12%"></colgroup>'
+ +'<div class="info">'+I('ID / Name','010000 / Name')+I('Department','-')+I('Designation','Designation')+I('DOJ/Grade','01-Jan-2026/-')+I('Location','-')+I('PAN','')+I('Salary Bank','')+I('Salary A/c No.','')+I('PF No./UAN','')+'<div></div></div>'
+ +'<table><colgroup><col width="13%"><col width="6.3%"><col width="22.6%"><col width="12.9%"><col width="13.1%"><col width="20.5%"><col width="11.6%"></colgroup>'
  +'<tr><th colspan="2">Days Details</th><th colspan="3">Earning Details</th><th colspan="2">Deduction Details</th></tr>'
- +'<tr><th>Description</th><th>Days</th><th>Description</th><th class="r">Rate</th><th class="r">Earned Amt.</th><th>Description</th><th class="r">Deducted Amt.</th></tr>'
- +er
- +'<tr class="tot"><td></td>'+C(s?'30.00':'','r')+'<td>TOTAL</td><td class="r tr">0.00</td><td class="r te">0.00</td><td></td><td class="r td">0.00</td></tr></table>'
- +'<div class="net"><span class="w">()</span><span>Net Payable : Rs. <span class="np">0.00</span></span></div>'
- +'<div class="ft">'+E('This is a computer generated slip does not required authorised signature')+'</div>'
- +'</div></div>';
-}
+ +'<tr class="h2"><th>Description</th><th>Days</th><th>Description</th><th>Rate</th><th>Earned Amt.</th><th>Description</th><th>Deducted Amt.</th></tr>'
+ +rows
+ +'<tr class="tot"><td>TOTAL</td>'+C('30.00','r')+'<td></td><td class="r tr">0.00</td><td class="r te">0.00</td><td></td><td class="r td">0.00</td></tr></table>'
+ +'<div class="net"><span class="w">()</span><span>Net Payable : Rs.<span class="np">0.00</span></span></div>'
+ +'<div class="ft">'+E('This is a computer generated slip does not required authorised signature')+'</div></div>'}
 function num(t){var v=parseFloat(String(t).replace(/[^0-9.\-]/g,''));return isNaN(v)?0:v}
 function fmt(v){return v.toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function pl(v){return v.toFixed(2)}
 var ones='Zero One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve Thirteen Fourteen Fifteen Sixteen Seventeen Eighteen Nineteen'.split(' '),tens=',,Twenty,Thirty,Forty,Fifty,Sixty,Seventy,Eighty,Ninety'.split(',');
 function w2(n){return n<20?ones[n]:tens[Math.floor(n/10)]+(n%10?'-'+ones[n%10]:'')}
 function w3(n){return (n>=100?ones[Math.floor(n/100)]+' Hundred'+(n%100?' ':''):'')+(n%100?w2(n%100):'')}
@@ -91,26 +90,21 @@ function calc(pg){
  var e=0,d=0,rt=0;
  pg.querySelectorAll('.e').forEach(function(c){e+=num(c.textContent)});
  pg.querySelectorAll('.d').forEach(function(c){d+=num(c.textContent)});
- pg.querySelectorAll('tr:not(.tot) td:nth-child(4)').forEach(function(c){rt+=num(c.textContent)});
- pg.querySelector('.tr').textContent=fmt(rt);pg.querySelector('.te').textContent=fmt(e);pg.querySelector('.td').textContent=fmt(d);
- pg.querySelector('.np').textContent=fmt(e-d);
+ pg.querySelectorAll('tr.b td:nth-child(4)').forEach(function(c){rt+=num(c.textContent)});
+ pg.querySelector('.tr').textContent=pl(rt);pg.querySelector('.te').textContent=pl(e);pg.querySelector('.td').textContent=pl(d);
+ pg.querySelector('.np').textContent=pl(e-d);
  pg.querySelector('.w').textContent='('+words(Math.max(0,e-d))+')'}
-function save(){try{localStorage.setItem('slips_v2',JSON.stringify({h:document.getElementById('slips').innerHTML}))}catch(x){}}
+function pg(){return document.querySelector('.page')}
+function save(){try{localStorage.setItem('slips_v3',JSON.stringify({h:slips.innerHTML}))}catch(x){}}
 var T;function later(){clearTimeout(T);T=setTimeout(save,400)}
-function pages(){return Array.prototype.slice.call(document.querySelectorAll('.page'))}
-function build(){
- var h='';for(var i=0;i<N;i++)h+=mk(i);
- slips.innerHTML=h;wire()}
-function wire(){pages().forEach(calc)}
-slips.addEventListener('input',function(e){var p=e.target.closest('.page');if(p)calc(p);later()});
+slips.addEventListener('input',function(){calc(pg());later()});
 slips.addEventListener('focusout',function(e){
- var t=e.target;if(t.classList&&t.classList.contains('n')){t.textContent=t.textContent.trim()?fmt(num(t.textContent)):'';calc(t.closest('.page'))}
- wire();later()});
+ var t=e.target;if(t.classList&&t.classList.contains('n')){t.textContent=t.textContent.trim()?fmt(num(t.textContent)):'';calc(pg())}
+ later()});
 slips.addEventListener('keydown',function(e){if(e.key=='Enter')e.preventDefault()});
-function prn(){window.print()}
 (function(){
- var d=null;try{d=JSON.parse(localStorage.getItem('slips_v2'))}catch(e){}
- if(d&&d.h){slips.innerHTML=d.h;wire()}else build()})();
+ var d=null;try{d=JSON.parse(localStorage.getItem('slips_v3'))}catch(e){}
+ slips.innerHTML=d&&d.h?d.h:mk();calc(pg())})();
 var MN='Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 function setMonth(){var t=mm.value+'-'+yy.value;document.querySelectorAll('.g_mo').forEach(function(n){n.textContent=t});document.title='Salary Slip '+t;later()}
 function initMonth(){
